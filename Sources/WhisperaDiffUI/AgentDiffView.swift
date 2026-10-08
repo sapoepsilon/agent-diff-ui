@@ -37,7 +37,7 @@ private struct DiffWebView {
         view.isOpaque = false
         view.backgroundColor = .clear
         #endif
-        if let url = Bundle.module.url(forResource: "index", withExtension: "html", subdirectory: "Resources") {
+        if let url = Bundle.module.url(forResource: "index", withExtension: "html") {
             view.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
         } else { fallback = "Diff resources could not load." }
         return view
